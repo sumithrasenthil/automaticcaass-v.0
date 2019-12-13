@@ -1,0 +1,105 @@
+
+<br>
+<br>
+<br>
+<table class="table table-dark" *ngIf="transactions.length > 0">
+  <thead>
+    <tr>
+      <th class="al"scope="col">#</th>
+      <th scope="col">From</th>
+      <th scope="col">To</th>
+      <th scope="col">Car_Identity</th>
+      <th scope="col">Charge_Consumed</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Timestamp</th>
+      <th scope="col">Valid ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tx of transactions; index as index">
+      <td>{{index}}</td>
+      <td class="text-truncate" style="max-width: 100px;">
+
+        <a [routerLink]="['/wallet', tx.fromAddress]" *ngIf="tx.fromAddress !== null">{{tx.fromAddress}}</a>
+
+        <span *ngIf="tx.fromAddress === null">System</span>
+
+        <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.fromAddress)">
+          <br><small>(Charging Station!)</small>
+        </span>
+      </td>
+      <td class="text-truncate" style="max-width: 100px;">
+          <a [routerLink]="['/wallet', tx.toAddress]">{{tx.toAddress}}</a>
+
+          <span class="text-muted" *ngIf="blockchainService.addressIsFromCurrentUser(tx.toAddress)">
+            <br><small>(CAAS!)</small>
+          </span>
+
+      </td>
+      <td>
+        {{tx.car_Identity}}
+        <span *ngIf="tx.fromAddress === null" class="text-muted"><h5>Null</h5></span>
+      </td>
+      <td>
+        {{tx.charge_consumed}}
+        <span *ngIf="tx.fromAddress === null" class="text-muted"><h5>Null</h5></span>
+      </td>
+      <td>
+        {{tx.amount}}
+        <span *ngIf="tx.fromAddress === null" class="text-muted"><br><small>(Block reward)</small></span>
+      </td>
+      <td>
+        {{tx.timestamp}}<br>
+        <span class="text-muted"><small>{{tx.timestamp |date:'MMM d, y, HH:mm'}}</small></span>
+      </td>
+      <td style="max-width: 40px;">
+        <span *ngIf="tx.isValid()">✓</span>
+        <span *ngIf="!tx.isValid()">✗</span>
+      </td>
+    </tr>
+  </tbody>
+
+
+</table>
+
+<!--//For the genesis block-->
+<div class="card" *ngIf="transactions.length === 0">
+   <h3 class="card-body align-items-center d-flex justify-content-center">This block has no transactions</h3>
+</div>
+
+<br>
+<br>
+<br><br>
+<p>hi</p>
+<!--//for the remaining blocks-->
+
+<!--<div class="card" *ngIf="transactions.length > 0">-->
+
+
+<!--  <h4 class="adjust1" >From  </h4>-->
+<!--    <button type="button"class="btn btn-default"></button>-->
+<!--  <h4 class ="adjust2">To</h4>-->
+<!--    <button type="button" id ="ad1" class="btn btn-default"></button>-->
+<!--  <h4 class="adjust3">Car Id</h4>-->
+<!--    <button type="button" id="ad2" class="btn btn-default"></button>-->
+<!--  <h4 class="adjust4">Charge Consumed</h4>-->
+<!--    <button type="button" id ="ad3" class="btn btn-default"></button>-->
+<!--  <h4 class="adjust5">Amount</h4>-->
+<!--    <button type="button" id ="ad4" class="btn btn-default"></button>-->
+<!--  <h4 class="adjust6">Timestamp</h4>-->
+<!--    <button type="button" id ="ad5" class="btn btn-default"></button>-->
+<!--  <button type="button" id="ad6" class="btn btn-success">Valid</button>-->
+
+
+
+<!--</div>-->
+
+
+
+
+
+
+
+<!--<div class="card1">-->
+
+<!--</div>-->

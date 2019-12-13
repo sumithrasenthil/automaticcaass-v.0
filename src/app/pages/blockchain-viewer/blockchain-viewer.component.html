@@ -1,0 +1,68 @@
+<!--<div class="stage">-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--  <div class="layer"></div>-->
+<!--</div>-->
+
+<link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+
+
+<div class="loading loading-2 wave wave-2">
+
+  <div class="loading-2-text"></div>
+</div>
+
+
+<br>
+<br>
+
+
+
+<div class="container">
+
+	<h2 class="alignment">TRANSACTIONS</h2>
+</div>
+
+<br><br>
+<div class="container" style="overflow-x: scroll;white-space: nowrap;">
+	<app-block-view
+		*ngFor="let block of blocks"
+		[block]="block"
+		[selectedBlock]="selectedBlock"
+		(click)="showTransactions(block)"
+	></app-block-view>
+</div>
+
+<br><br>
+<br>
+<div class="container">
+	<h1 id="change">Transactions Inside Block {{ getBlockNumber(selectedBlock) }}</h1>
+<div>
+
+<div>
+	<app-transactions-table
+		[transactions]="selectedBlock.transactions"
+	></app-transactions-table>
+</div>
+  <div>
+    <app-items
+
+    ></app-items>
+  </div>

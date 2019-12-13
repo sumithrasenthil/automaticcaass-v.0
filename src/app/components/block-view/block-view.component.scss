@@ -1,0 +1,57 @@
+.card{
+	width: 18rem;
+	display:inline-block;
+	margin: 0 10px 0 0;
+  position: relative;
+  font-family: "DejaVu Serif";
+  transition: 1s;
+  border-radius: 5px;
+
+
+
+
+ }
+
+
+.container{
+  box-shadow: #0b2e13;
+}
+.card-title{
+  text-align: center;
+  font-weight: 900;
+  text-shadow: #0b2e13;
+}
+
+.container{
+  border-color: #1c7430;
+  background-color: #5bc75c;
+}
+
+.card:hover{
+  -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+  box-shadow: #c6c6c6;
+  background-color:#000000;
+  border-radius: 30px;
+  //color:#48545C;
+  color:white;
+  .test{
+    color:blue;
+    //font-size: 18px;
+  }
+}
+
+
+.test{
+  color: #000000;
+  transition: .5s;
+}
+
+.test:hover{
+  color: #6f42c1;
+}
+//#f88203
+
+.border-color{
+  background-color: #c6c6c6;;
+}

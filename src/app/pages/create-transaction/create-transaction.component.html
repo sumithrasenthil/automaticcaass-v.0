@@ -1,0 +1,42 @@
+<br>
+<div class="container">
+	<h1 class="alignment">CREATE TRANSACTION</h1>
+</div>
+
+	<br>
+<div class="container">
+	<div class="form-group">
+	    <label for="fromAddress">From address</label>
+	    <input type="text" class="form-control" id="fromAddress" aria-describedby="fromAddressHelp" [(ngModel)]="ownWalletKey.publicKey" disabled>
+
+  	</div>
+   <br>
+  	<div class="form-group">
+	    <label for="toAddress">To address</label>
+	    <input type="text" class="form-control" id="toAddress" aria-describedby="toAddressHelp" [(ngModel)]="newTx.toAddress">
+
+  	</div>
+<br>
+  	<div class="form-group">
+	    <label for="amount">Amount</label>
+	    <input type="number" class="form-control" id="amount" aria-describedby="amountHelp" [(ngModel)]="newTx.amount">
+
+  	</div>
+  <br>
+  <div class="form-group">
+    <label for="car_Identity">Car_Identity</label>
+    <input type="test" class="form-control" id="car_Identity" aria-describedby="amountHelp" [(ngModel)]="newTx.car_Identity">
+
+  </div>
+<br>
+  <div class="form-group">
+    <label for="charge_consumed">Charge_Consumed</label>
+    <input type="number" class="form-control" id="" aria-describedby="amountHelp" [(ngModel)]="newTx.charge_consumed">
+
+  </div>
+  <br>
+
+  	<button (click)="createTransaction()" type="submit" class="btn btn-primary">Sign & create transaction</button>
+
+
+</div>

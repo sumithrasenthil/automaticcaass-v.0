@@ -1,0 +1,42 @@
+<br>
+<br>
+
+<div class="container">
+  <h1 class="alignment">SETTINGS</h1>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="container">
+
+
+
+  <div class="form-group">
+    <label for="difficulty"><h3>Difficulty</h3></label>
+    <input type="number" class="form-control" id="difficulty" aria-describedby="difficultyHelp" [(ngModel)]="blockchain.difficulty">
+    <small id="difficultyHelp" class="form-text text-muted">
+
+    	<br>Default: 2
+    </small>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <label for="miningReward"><h3>Mining reward</h3></label>
+    <input type="number" class="form-control" id="miningReward" aria-describedby="miningRewardHelp" [(ngModel)]="blockchain.miningReward">
+    <small id="miningRewardHelp" class="form-text text-muted">
+
+		<br>Default: 100
+    </small>
+    <br>
+    <br>
+
+<!--    <button (click)="createTransaction()" type="submit" class="btn btn-primary">Sign & create transaction</button>-->
+
+  </div>
+
+
+

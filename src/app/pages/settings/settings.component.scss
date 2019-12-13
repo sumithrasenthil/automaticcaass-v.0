@@ -1,0 +1,106 @@
+//@import url('https://fonts.googleapis.com/css?family=Calistoga&display=swap');
+//
+//
+////h1{
+////  text-align: center;
+////  text-decoration-color:linear-gradient(90deg, #43c6ac 0%,#191654 100% );
+////  font-family: 'Calistoga', serif;
+////}
+//
+//h1 {
+//  font-size: 72px;
+//  background: #da9e57;
+//  -webkit-background-clip: text;
+//  -webkit-text-fill-color: transparent;
+//  text-align: center;
+//  font-family: 'Calistoga', serif;
+//}
+//
+//
+//.container {
+//  justify-content: center;
+//  align-items: center;
+//
+//}
+//
+//.jumbotron{
+//   //display: inline-block;
+//  border: solid black 5px;
+//  width:1000px;
+//}
+//
+//
+//.form-control{
+//  border-radius: 20px;
+//  border-bottom-style: groove;
+//  background-color: #6a676a;
+//}
+
+
+//.alignments{
+//  text-align: center;
+//  color: #48545c;
+//  font-family: "Calistoga";
+//  font-size: 45px;
+//  transition: 5s;
+//
+//}
+//
+//
+//.form-group{
+//  color: white;
+//  font-family: "DejaVu Serif";
+//
+//}
+//
+//h3{
+//  font-size: 18px;
+//}
+//
+//.btn{
+//  border-radius: 25px;
+//  font-family: Calistoga;
+//  background-color: black;
+//  border-bottom-width: 2px;
+//  font-size: 20px;
+//  right: -20px;
+//}
+
+
+@import url('https://fonts.googleapis.com/css?family=Alatsi:500&display=swap');
+
+.container{
+  top:25px;
+}
+.alignment{
+  text-align: center;
+  color: white;
+  font-family: "Calistoga";
+  font-size: 45px;
+  transition: 5s;
+
+}
+.btn{
+  border-radius: 25px;
+  font-family: Calistoga;
+  background-color: black;
+  border-bottom-width: 2px;
+  font-size: 20px;
+  right: -20px;
+}
+
+.form-group{
+  color: white;
+  font-family: "DejaVu Serif";
+  left:50%;
+
+}
+.form-control{
+  border-radius: 15px;
+  height: 40px;
+}
+
+h3{
+  font-size: 20px;
+
+}
